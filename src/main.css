@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root{
+    --font-family-header-footer: 'Bebas Neue', sans-serif;
+    --font-weight-header-footer: 400;
+    --font-style-header-footer: normal;
+
+	--font-family-main: 'Arvo', sans-serif;
+	--font-weight-main: 300;
+	--font-style-main: normal;
+}
+
+body {
+	line-height: 1;
+	
+	background-image: radial-gradient(circle, #ff9933 2px, transparent 2px),
+	radial-gradient(circle, #37474f 2px, transparent 2px);
+
+	background-size: 10px 10px;
+	background-repeat: repeat;
+	background-attachment: fixed;
+	background-position: center;
+}
+
+/*tipo de fuente*/
+.header, .footer__container, .language-selector select  {
+    font-family: var(--font-family-header-footer);
+    font-weight: var(--font-weight-header-footer);
+    font-style: var(--font-style-header-footer);
+}
+.perfil__container,.habilidades__container,.sobremi__container,.proyecto__container{
+	font-family: var(--font-family-main);
+    font-weight: var(--font-weight-main);
+    font-style: var(--font-style-main);  
+}
+
+/*Bordes y sombras*/
+.perfil__container, .proyecto__container, .habilidades__container,.sobremi__container{
+	border-radius:  10px;
+    border: 3px solid #040404;
+    box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.6), 
+    -10px -10px 20px rgba(255, 255, 255, 0.6);
+}
+
+/*colores de fondo*/
+.perfil__container, .footer__menu,.habilidades__container{
+	background-color: rgb(219, 247, 103);
+}
+.proyecto__container,.sobremi__container{
+	background-color: rgb(95, 158, 160);
+}
+
+/*titulos*/
+.proyecto__titulos, .habilidades__titulos, .sobremi__titulo{
+	/* font-size: 3.5rem; */
+	font-size: clamp(1.8rem, 4vw, 3.5rem);
+    text-align: center;
+
+	margin-top: 25px;
+    margin-bottom: 30px;  
+}
+.proyecto__titulo{
+	margin-top: 5px;
+}
+
+/*descripcion*/
+.sobremi__description, .perfil__description{
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/*texto*/
+.perfil__texto,.sobremi_texto {
+	text-align: justify;
+}
+
+
+/*--------------Tablet---------------------*/
+@media (max-width: 1339px){
+/*Header*/
+
+body .menu__logo {
+	margin-top: none; 
+  }
+/*Perfil - About Me*/
+	body .perfil__container{
+		display: flex;
+		flex-direction: column;
+	}
+	.perfil__description {
+		order: 1;
+		margin-left:30px;
+		margin-right: 30px;
+		margin-bottom: 30px;
+	}
+	body .perfil__texto{
+		margin-top: 10px;
+		margin-left:10px;
+		margin-right: 10px;
+	}
+	body .perfil__lista{
+		padding: 0px;
+	}
+	body .perfil__imagen {
+		margin: 20px;
+		padding: 0;
+    }	
+
+/*proyectos - projeccts */
+	body .proyecto__container{
+		padding-bottom:20px;
+	}	
+	
+/*habilidades - skills*/
+	body .habilidades__lista{
+		gap: 50px;
+		width: 90%;
+	}
+	body .habilidades__item{
+		min-width: 100%;
+	}
+/*sobre mi - who am i*/
+	body .sobremi_texto {
+		word-spacing: 3px;
+	}
+}
+
+/*--------------Mobil---------------------*/
+@media (max-width: 387px){
+
+/*Header*/
+	.menu__logo {
+		order: 1;
+	  }
+	.language-selector {
+		order: 2; 
+	  }
+	.menu__lista {
+		order: 3; 
+	  }
+
+/*proyectos - projeccts */
+	body .proyecto__lista{
+		width: 90%;
+	}
+	body .proyecto__item{
+		min-width: 100%;
+	}
+}

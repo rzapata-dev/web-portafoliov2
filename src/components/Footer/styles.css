@@ -1,0 +1,41 @@
+.footer__container {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    text-align: center;
+
+    font-size: clamp(1rem, 4vw, 1.8em);
+    padding-top: 25px;
+}
+
+.footer__menu {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    text-align: center;
+
+    width: auto;
+    
+    padding-top: 12px;
+    padding-bottom: 5px;
+
+    border-radius: 10px;
+    border:  3px solid #040404;
+}
+
+.footer__lista {
+    display: flex;
+
+    list-style: none;
+    padding-left: 5px;
+}
+
+.footer__itens {
+    text-decoration: none;
+    padding: 10px ;
+    transition: transform 0.3s ease, color 0.3s ease; 
+}
+
+.footer__itens:hover {
+    text-decoration: underline;
+}
