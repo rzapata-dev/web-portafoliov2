@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import './styles.css'; 
 import SCss from '../../assets/SCss.svg';
 import SHtml from '../../assets/SHtml.png';
-import SJs from '../../assets/SJs.png';
+import SJs from '../../assets/Sjs.png';
 import SReact from '../../assets/SReact.svg';
 import SGitHub from '../../assets/SGitHub.png';
 
